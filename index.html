@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="תיעוד מלא של מושב הפתיחה ב-Microsoft Frontier Transformation Week: מה נאמר, מי אמר, השקפים עצמם, ומה אסור לקחת מזה.">
+<meta property="og:title" content="פרונטייר · מושב הפתיחה">
+<meta property="og:description" content="מה באמת נאמר במושב הראשון של Microsoft Frontier. נכתב על ידי גיא כהן.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="he_IL">
+<style>html{-webkit-text-size-adjust:100%}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>פרונטייר · מושב הפתיחה</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;700&display=swap">
+<style>
+:root{
+  --bg:#ECEFF3; --surf:#FFFFFF; --surf2:#E3E8EF; --ink:#10141A; --dim:#5B6672;
+  --line:#D2D8E0; --acc:#1F4BD8; --acc-soft:#E2E8FD;
+  --flag:#8C2E20; --flag-soft:#F7E4E0;
+  --ok:#0E6A5B; --ok-soft:#DCEDE9;
+  --fh:"Frank Ruhl Libre",Georgia,serif;
+  --fb:"Assistant","Segoe UI",Arial,sans-serif;
+  --fm:ui-monospace,SFMono-Regular,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B0E13; --surf:#141922; --surf2:#1C222C; --ink:#E8EDF3; --dim:#98A3AF;
+  --line:#262E3A; --acc:#8AA6FF; --acc-soft:#151F39;
+  --flag:#E5917E; --flag-soft:#2C1613;
+  --ok:#54BFAB; --ok-soft:#0E2825;
+}}
+:root[data-theme="dark"]{
+  --bg:#0B0E13; --surf:#141922; --surf2:#1C222C; --ink:#E8EDF3; --dim:#98A3AF;
+  --line:#262E3A; --acc:#8AA6FF; --acc-soft:#151F39;
+  --flag:#E5917E; --flag-soft:#2C1613;
+  --ok:#54BFAB; --ok-soft:#0E2825;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);direction:rtl;
+     font-family:var(--fb);font-size:17px;line-height:1.68;
+     -webkit-font-smoothing:antialiased}
+.page{max-width:880px;margin:0 auto;padding:30px 20px 90px;display:flex;flex-direction:column;gap:34px}
+.kick{font-family:var(--fm);font-size:11.5px;font-weight:700;letter-spacing:.19em;color:var(--acc);margin:0}
+h1{font-family:var(--fh);font-weight:900;font-size:clamp(32px,7.4vw,50px);line-height:1.04;
+   margin:11px 0 12px;text-wrap:balance;letter-spacing:-.01em}
+header.top{border-bottom:2px solid var(--ink);padding-bottom:20px}
+.lede{font-size:18.5px;color:var(--dim);margin:0 0 14px;max-width:60ch}
+.meta{display:flex;flex-wrap:wrap;gap:6px 20px;font-family:var(--fm);font-size:12.5px;color:var(--dim)}
+.meta b{color:var(--ink);font-weight:700}
+h2{font-family:var(--fh);font-weight:700;font-size:clamp(23px,4.4vw,30px);line-height:1.18;
+   margin:0 0 6px;text-wrap:balance}
+h3{font-family:var(--fb);font-weight:700;font-size:18px;margin:22px 0 2px}
+section>p:first-of-type{margin-top:6px}
+p{margin:0 0 13px}
+.dim{color:var(--dim)}
+.eyebrow{font-family:var(--fm);font-size:11px;letter-spacing:.17em;color:var(--dim);
+         font-weight:700;display:block;margin-bottom:5px}
+figure{margin:20px 0 6px}
+figure img{display:block;width:100%;border:1px solid var(--line);border-radius:5px;background:var(--surf)}
+figcaption{font-size:14.5px;color:var(--dim);margin-top:9px;line-height:1.5}
+.cred{font-family:var(--fm);font-size:10.5px;letter-spacing:.13em;color:var(--acc);
+      display:block;margin-bottom:3px;font-weight:700}
+blockquote{margin:16px 0;padding:0 16px 0 0;border-inline-start:3px solid var(--acc);
+           padding-inline-start:17px;font-size:18.5px;line-height:1.55}
+blockquote p:last-child{margin-bottom:0}
+blockquote cite{display:block;font-style:normal;font-size:14px;color:var(--dim);margin-top:8px;font-family:var(--fm)}
+.panel{background:var(--surf);border:1px solid var(--line);border-radius:8px;padding:19px 21px}
+.panel.acc{background:var(--acc-soft);border-color:transparent}
+.panel.flag{background:var(--flag-soft);border-color:transparent}
+.panel.flag h2,.panel.flag h3{color:var(--flag)}
+.panel.ok{background:var(--ok-soft);border-color:transparent}
+.panel p:last-child,.panel ul:last-child{margin-bottom:0}
+ul{padding:0 20px 0 0;margin:0 0 13px}
+li{margin-bottom:7px}
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--surf);margin:16px 0}
+table{width:100%;border-collapse:collapse;font-size:15.5px;min-width:520px}
+th,td{text-align:right;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--surf2);font-family:var(--fm);font-size:11px;letter-spacing:.09em;
+   text-transform:uppercase;font-weight:700;color:var(--dim)}
+tbody tr:last-child td{border-bottom:0}
+td b{font-weight:700}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+a{color:var(--acc);text-underline-offset:3px}
+.links li{margin-bottom:10px}
+footer{border-top:1px solid var(--line);padding-top:18px;color:var(--dim);font-size:14.5px}
+@media (max-width:560px){body{font-size:16.5px}.page{gap:28px}}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="top">
+  <p class="kick">MICROSOFT FRONTIER · מושב הפתיחה · 14.9.2026</p>
+  <h1>מה באמת נאמר במושב הראשון</h1>
+  <p class="lede">ישבתי במושב הפתיחה של שבוע הטרנספורמציה של מיקרוסופט, קראתי את שלוש המצגות, את הצ׳אט הרשמי ואת התמליל המלא. כאן רק מה שנאמר, עם שם של מי שאמר אותו.</p>
+  <div class="meta"><span><b>דוברים</b> זואי האטוף, קארן ניגאם</span><span><b>לקוח בחדר</b> Nestlé</span><span><b>אורך</b> 45 דקות</span><span><b>כתב</b> גיא כהן</span></div>
+</header>
+
+<section class="panel acc">
+  <span class="eyebrow">איך לקרוא את הדף</span>
+  <p>כל מה שמיקרוסופט אומרת על עצמה מסומן ככזה. מספר בלי מקור לא נכנס לכאן, ומספר עם מקור ממומן מגיע עם הסייג צמוד אליו. בסוף יש פרק שלם על מה שאסור לקחת מהמושב הזה, והוא החשוב ביותר בדף.</p>
+</section>
+
+<section>
+  <h2>הבעיה שהם פתחו איתה</h2>
+  <p>העבודה האמיתית מפוזרת בין מערכות: CRM, ERP, מערכת כוח אדם, מערכת שירות, מחסן. השקף שבא אחריו אמר את מה שכולם יודעים ולא אומרים בקול, שהיום מי שמחבר בין המערכות האלה הוא בן אדם.</p>
+  <figure><img src="slides/karan-07.png" alt="היום אנחנו סותמים את הפערים עם בני אדם כתווך. זה הניסוח שלהם, לא שלי."><figcaption><span class="cred">קארן ניגאם · שקף 7</span>היום אנחנו סותמים את הפערים עם בני אדם כתווך. זה הניסוח שלהם, לא שלי.</figcaption></figure>
+  <p>וזה גם המבנה שהם מציעים במקום: שלוש שכבות שעובדות על אותם נתונים. צ׳אט לשאלות, Cowork לעבודה מואצלת, והאפליקציות העסקיות עצמן.</p>
+  <figure><img src="slides/karan-08.png" alt="שלוש השכבות: Copilot Chat, Copilot Cowork, והאפליקציות העסקיות."><figcaption><span class="cred">קארן ניגאם · שקף 8</span>שלוש השכבות: Copilot Chat, Copilot Cowork, והאפליקציות העסקיות.</figcaption></figure>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>ההגדרה שחיפשתי, ומי שנתן אותה</h2>
+  <p>נכנסתי למושב עם שאלה אחת פתוחה: מה זה Cowork ובמה הוא שונה מקופיילוט הרגיל. התשובה הכי נקייה שנאמרה שם לא הגיעה מהבמה אלא ממשתתף בצ׳אט, והמנחה אימץ אותה במלואה.</p>
+  <blockquote>
+    <p>בקופיילוט המשתמש יודע את התהליך ומתקשר אותו, והכלי מאיץ את הביצוע. ב-Cowork המשתמש מתקשר את התוצאה הרצויה, והכלי מתזמר את העבודה, בוחר את הכלים והסוכנים, ופונה למשתמש כשנדרש שיפוט או אישור.</p>
+    <cite>נוסח על ידי משתתף, אומץ על ידי המנחה</cite>
+  </blockquote>
+  <figure><img src="slides/karan-10.png" alt="שקף הממשל של Cowork. מיקרוסופט מדגישה כאן הרשאות, כללים עסקיים ואחריותיות, ולא יכולות."><figcaption><span class="cred">קארן ניגאם · שקף 10</span>שקף הממשל של Cowork. מיקרוסופט מדגישה כאן הרשאות, כללים עסקיים ואחריותיות, ולא יכולות.</figcaption></figure>
+</section>
+
+<section class="panel flag">
+  <span class="eyebrow">הממצא על הכסף</span>
+  <h2>מושב קופיילוט לא מכסה את השימוש ב-Cowork</h2>
+  <p>הצריכה מחויבת בנפרד בקרדיטים, לפי עצימות השימוש ולא לפי מספר המשתמשים. זו עלות שנייה מעל הרישיון, והיא לא צפויה מראש.</p>
+  <p>ויש כאן אי התאמה בין שני מקורות רשמיים, ואני לא מיישב אותה:</p>
+  <ul>
+    <li>מנחה בצ׳אט הרשמי אמר ש-Cowork אינו כלול ברישיון Premium, ושהפרימיום הוא תנאי מקדים לרכישת מנוי pay-as-you-go נפרד.</li>
+    <li>תשובה אחרת אמרה שהגישה כלולה ברישיון Microsoft 365 Copilot, אבל השימוש נמדד ומחויב בנפרד.</li>
+  </ul>
+  <p>שתי הגרסאות מסכימות על הכסף. הן נבדלות רק בשאלה אם צריך רכש נפרד. השאלה שסוגרת את זה: האם קיים SKU נפרד לרכישה, או שזה נדלק על מושב קיים והמונה מתחיל לרוץ.</p>
+  <h3>ומה מניע את הצריכה, לפי המנחה</h3>
+  <ul>
+    <li>נפח ההקשר ונתוני הגראונדינג</li>
+    <li>מספר הפעלות הסוכן באותו תהליך</li>
+    <li>אורך היסטוריית השיחה והזיכרון</li>
+    <li>משימות ניסוח וחשיבה מורכבות</li>
+    <li>קריאות למערכות ומחברים חיצוניים</li>
+  </ul>
+  <p>ובלשונו, השיקול אינו מספר המשתמשים אלא עצימות ההרצה והתזמור.</p>
+</section>
+
+<section>
+  <h2>מה ש-Cowork עושה ולא הופיע באף שקף</h2>
+  <p>שש יכולות שעלו רק בדיבור ובצ׳אט. מי שקורא את המצגת בלבד מפספס אותן.</p>
+  <ul>
+    <li>אוטומציה בתוך דפדפן Edge כאחד הכלים שהוא מפעיל.</li>
+    <li>תזמון משימות על בסיס חוזר, כלומר לא רק הפעלה ידנית.</li>
+    <li>קובץ שנוצר על ידי Cowork והועלה ל-OneDrive קיבל תיוג רגישות באופן יזום.</li>
+    <li>רב מודלי מההתחלה, עם תמיכה במשפחות מודלים של יותר מספק אחד.</li>
+    <li>מפרק בעיה מורכבת לתת משימות, ומעוגן ב-WorkIQ. ניתן להרחבה עם Fabric, Dynamics 365 ופתרונות שותפים.</li>
+    <li>סקיל בשם Sound Like Me שלומד את סגנון הכתיבה של המשתמש ומתאים אליו תקשורת.</li>
+  </ul>
+  <p class="dim">שתי הראשונות מקבילות כמעט אחת לאחת למה שאמזון הציגה בכנס שלה שבוע קודם, בדמות Quick Desktop ו-Flows.</p>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>שלוש הדרגות, וזה החלק ששווה לשמור</h2>
+  <p>המסגרת של זואי האטוף היא מפת החלטה ברמת המשימה, ולא סולם בשלות ארגוני. אפשר לעבוד בשלוש הדרגות באותו יום.</p>
+  <figure><img src="slides/zoe-05.png" alt="Assistants, Delegates, Autopilots על ציר שבין מאמץ אנושי לאוטונומיה."><figcaption><span class="cred">זואי האטוף · שקף 5</span>Assistants, Delegates, Autopilots על ציר שבין מאמץ אנושי לאוטונומיה.</figcaption></figure>
+  <p>בניסוח שנאמר: Assistants תומכים בעבודה קיימת דרך שאלות, שליפות וניסוח. Delegates לוקחים תוצרים איטרטיביים כמו דוחות ותוכניות. Autopilots מריצים תהליכים חוזרים ורב שלביים בפיקוח מועט. ככל שהאוטונומיה עולה, המאמץ האנושי עובר מביצוע לכיוון.</p>
+  <figure><img src="slides/zoe-03.png" alt="ההגדרה שלהם לארגון חזית: ארגון שמשתמש במודל תפעולי חדש כדי לתזמר עבודה בין אנשים לסוכנים."><figcaption><span class="cred">זואי האטוף · שקף 3</span>ההגדרה שלהם לארגון חזית: ארגון שמשתמש במודל תפעולי חדש כדי לתזמר עבודה בין אנשים לסוכנים.</figcaption></figure>
+</section>
+
+<section class="panel ok">
+  <span class="eyebrow">אומת במושב</span>
+  <h2>Agent 365 הוא שכבת בקרה, לא מנוע ריצה</h2>
+  <p>הוא נותן זהות, מדיניות, אבטחה ונראות. הוא אינו מארח ואינו מריץ את לוגיקת הסוכנים. הזהות ניתנת דרך Microsoft Entra Agent ID.</p>
+  <p>והחלק שמפתיע: הפלטפורמות שהוא מנהל כוללות Azure AI Foundry, Copilot Studio, Semantic Kernel וגם AWS Bedrock. כלומר שכבת הממשל של מיקרוסופט מנהלת גם סוכנים שרצים על הענן המתחרה.</p>
+</section>
+
+<section>
+  <h2>גבול הטננט, בניואנס שחשוב למי שמוכר לארגון</h2>
+  <p>אחסון נתונים בגבול הנתונים של האיחוד האירופי אינו אומר עיבוד בלעדי באיחוד. שלושת הגורמים הקובעים הם אזור הטננט, האם Flex Routing מושבת, ואיזה מודל מותר בטננט.</p>
+  <p>ולגבי אנתרופיק בתוך קופיילוט: Claude הוא קבלן משנה של מיקרוסופט וכפוף להסכמי האבטחה והפרטיות שלה, ואדמין יכול להשבית מודלים של אנתרופיק ברמת הטננט כולו ממרכז הניהול. תאריך זמינות באירופה טרם הוכרז.</p>
+</section>
+
+<hr class="rule">
+
+<section>
+  <h2>מספרים עם שם של חברה</h2>
+  <p>אלה המספרים היחידים מהמושב שאפשר לצטט, כי לכל אחד יש ארגון מאחוריו. כולם דווחו על ידי מיקרוסופט או על ידי הלקוח מהבמה, כלומר הם עדות ולא מדידה בלתי תלויה.</p>
+  <div class="tw"><table>
+    <thead><tr><th>ארגון</th><th>מה נעשה</th><th>מה דווח</th></tr></thead>
+    <tbody>
+      <tr><td><b>Nestlé</b></td><td>קופיילוט לצד Nest GPT, כלי פנימי שצוות החדשנות בנה לפני שנים</td><td class="num">יותר מ-80,000 משתמשים פעילים בחודש, מתוך כ-120,000 עובדי ידע</td></tr>
+      <tr><td><b>Adecco</b></td><td>קופיילוט בעבודת המגייסים, לצד אקדמיית AI פנימית</td><td class="num">האקדמיה הכשירה יותר מ-12,000 איש בעשר מדינות, יותר מ-35,000 עברו הכשרה על AI אחראי, ודווח על 63 אחוז יותר פרודוקטיביות</td></tr>
+      <tr><td><b>Visa</b></td><td>סוכנים מובנים ב-Dynamics 365 Customer Service</td><td class="num">כמעט 75 אחוז שיפור בשביעות רצון, וכמעט 90 אחוז פחות זמן ליצירת מאמרי ידע</td></tr>
+      <tr><td><b>Hertz</b></td><td>סוכן מותאם שנבנה ב-Copilot Studio לסיוע בדרכים</td><td class="num">15 אחוז פחות זמן פתרון</td></tr>
+      <tr><td><b>Heineken</b></td><td>פיתוח יישומים ב-Power Platform</td><td class="num">יותר מ-10,000 יישומים, כ-3 מיליון שעות חיסכון</td></tr>
+      <tr><td><b>Microsoft</b> על עצמה</td><td>מכירות, שירות ו-ERP</td><td class="num">כ-10 אחוז יותר הכנסה לאיש מכירות, לפחות 16 אחוז פחות זמן טיפול ממוצע, 60 אחוז פחות זמן לסגירת בעיית גבייה</td></tr>
+    </tbody>
+  </table></div>
+  <figure><img src="slides/karan-15.png" alt="מיקרוסופט על הפריסה הפנימית שלה. שים לב שזה ספק שמודד את עצמו."><figcaption><span class="cred">קארן ניגאם · שקף 15</span>מיקרוסופט על הפריסה הפנימית שלה. שים לב שזה ספק שמודד את עצמו.</figcaption></figure>
+  <p>והדבר שהכי שווה מכל הרשימה הזאת הוא דווקא נסטלה, ולא באופן שמיקרוסופט התכוונה. 80,000 המשתמשים הם על קופיילוט וגם על Nest GPT במקביל. לקוח הדגל של האימוץ מריץ שני כלים, לא אחד.</p>
+  <p>ופול סונדרס מנסטלה, כשנשאל על חסמים, ענה ממשל ותאימות. בלשונו, הצוות שלו שונא סיכון ורוצה שהכל יהיה מאובטח בתכנון. הוא מנה גם אמון משתמשים ואיכות נתונים.</p>
+  <blockquote>
+    <p>הוא חי בשוויץ וכותב באנגלית, ורוצה שהתשובה תהיה רלוונטית לו ולא למישהו במדינה אחרת.</p>
+    <cite>פול סונדרס, נסטלה, על בעיית העיגון</cite>
+  </blockquote>
+  <p>זו בדיוק הבעיה שאנחנו מתארים בעברית, בגרסה גיאוגרפית. כלומר היא לא בעיה ישראלית אלא בעיה של כל ארגון רב לאומי.</p>
+</section>
+
+<section>
+  <h2>המספר שכולם יצטטו, והסייג שנעלם ממנו</h2>
+  <figure><img src="slides/karan-04.png" alt="1.3 מיליארד סוכנים עד 2028. שורת המקור בתחתית השקף אומרת IDC Info Snapshot, ממומן על ידי מיקרוסופט."><figcaption><span class="cred">קארן ניגאם · שקף 4</span>1.3 מיליארד סוכנים עד 2028. שורת המקור בתחתית השקף אומרת IDC Info Snapshot, ממומן על ידי מיקרוסופט.</figcaption></figure>
+  <p>המחקר ממומן על ידי מיקרוסופט, וזה כתוב על השקף עצמו באותיות קטנות. מי שמצטט את המספר חייב לומר את זה, אחרת מספיק שאדם אחד בחדר יבדוק והטיעון כולו מאבד גובה.</p>
+  <p>שני מספרים חיצוניים נוספים שנאמרו מהבמה: גרטנר, שסוכנים ייעודיים למשימה יהיו בכ-40 אחוז מיישומי הארגון עד סוף 2026 לעומת 5 אחוזים שנה קודם. ו-Work Trend Index של מיקרוסופט, עם מה שהם מכנים פרדוקס הטרנספורמציה, שבו האנשים מוכנים והארגונים סביבם אינם.</p>
+</section>
+
+<section>
+  <h2>Agent Factory, ומה שלא נאמר עליה</h2>
+  <figure><img src="slides/karan-16.png" alt="תוכנית פרי-פייד אחת לבנייה על Copilot Studio, Foundry ו-GitHub Copilot."><figcaption><span class="cred">קארן ניגאם · שקף 16</span>תוכנית פרי-פייד אחת לבנייה על Copilot Studio, Foundry ו-GitHub Copilot.</figcaption></figure>
+  <p>לא נמסרו לה שום תנאים מסחריים. אין מחיר, אין סף מינימלי, ולא נאמר אם התוכנית מחליפה רישוי לפי מושב או מתווספת עליו. וגם לא נאמר מי בפועל מעביר את ההכשרה שלה, מיקרוסופט או שותפים. זו השאלה הפתוחה החשובה ביותר מהמושב, ואני אשאל אותה שוב ביום רביעי.</p>
+</section>
+
+<hr class="rule">
+
+<section class="panel">
+  <span class="eyebrow">לקח צדדי, ושווה לכל מי שמקליט פגישות</span>
+  <h2>סיכום הפגישה האוטומטי ייחס לי דברים שלא אמרתי</h2>
+  <p>הסיכום שנוצר מההקלטה כתב "גיא כהן תיאר" ו"גיא כהן בחר תוספים של דיינמיקס". לא אמרתי אף אחד מהמשפטים האלה. אלה זואי האטוף וקארן ניגאם. הסיבה פשוטה: ההקלטה נעשתה מהחשבון שלי, והכלי הניח שהדובר הוא בעל החשבון.</p>
+  <p>אם הייתי מעלה את הקובץ כמו שהוא למאגר ידע, המאגר היה לומד שאני אמרתי את זה, וזה היה חוזר אלי בתשובות חודשים אחר כך. תבדקו ייחוס דוברים לפני שאתם מזינים תמלול לאיזשהו מקום שזוכר.</p>
+</section>
+
+<section class="panel flag">
+  <h2>מה לא לקחת מהמושב הזה</h2>
+  <ul>
+    <li>Northwind ו-Redwood Energy אינן חברות. אלה חשבונות הדגמה על דאטה מוכן. כל תרחישי ההדגמה שייכים לקטגוריה הזאת ואינם ראיה לכלום.</li>
+    <li>ל-Agent Factory אין תנאים מסחריים. אין להציג אותה כהצעה.</li>
+    <li>forward deployed engineering מופיע על שקף בלבד ולא הוזכר בדיבור אפילו פעם אחת.</li>
+    <li>1.3 מיליארד הסוכנים הם מ-IDC במחקר ממומן. אם מצטטים, אומרים את זה.</li>
+    <li>כל מספרי הלקוחות הם עדות של הספק או של הלקוח על עצמו. אין שם מדידה בלתי תלויה.</li>
+    <li>שקף אחד במצגת סומן Microsoft Confidential ולכן הוא לא מופיע בדף הזה.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>החומרים הרשמיים של המושב</h2>
+  <ul class="links">
+    <li><a href="https://aiskillsnavigator.microsoft.com/explore/search/video-c5a3584fc23916dca48fcd03cd9666e7fef537ff621a74f61f779e27e14e2513?UTM_Source=FLD_Asset&amp;UTM_Medium=Asset&amp;UTM_Campaign=FTW&amp;UTM_Term=Bring%20AI">Copilot Cowork · הסרטון הרשמי על הרצת תהליכים מקצה לקצה</a></li>
+    <li><a href="https://www.microsoft.com/en-us/worklab/work-trend-index">Work Trend Index 2026 · המקור לפרדוקס הטרנספורמציה</a></li>
+    <li><a href="https://www.microsoft.com/en/customers/story/24691-adecco-group-ag-microsoft-365-copilot">קייס Adecco · קופיילוט למגייסים, כולל האקדמיה הפנימית</a></li>
+    <li><a href="https://www.microsoft.com/en-us/events/local-events/microsoft-agent-a-thon">Agentathon · ההרשמה פתוחה</a></li>
+  </ul>
+</section>
+
+<footer>
+  נכתב מתוך שלוש מצגות המושב, הצ׳אט הרשמי של השאלות והתשובות והתמליל המלא, ביום שבו המושב התקיים. השקפים שייכים למיקרוסופט ומוצגים כאסמכתה לדברים שנאמרו. שלושת המושבים הבאים הם ג׳ בבוקר, ד׳ על מרכז מצוינות והכשרה, וה׳ על ארבעת העמודים.
+</footer>
+</div>
+</body>
+</html>
